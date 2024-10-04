@@ -22,11 +22,8 @@
     <h2>Processa contacte</h2>
     <?php
 
-    // Obre el fitxer contactes31.txt i el llegeix
     $contacts = file('contactes31.txt');
 
-
-    // 3. Mostrar els contactes del fitxer en una taula
     echo "<table>\n";
     echo "<tr>";
     echo "<th>Nom</th>";
@@ -44,7 +41,6 @@
     }
     echo "</table>\n";
 
-    // 4. Generar un nou fitxer contactes31b.txt amb els contactes separats pel símbol #
     $contactes_b = "";
     foreach ($contacts as $contact) {
         $contact_array = explode(", ", $contact);
